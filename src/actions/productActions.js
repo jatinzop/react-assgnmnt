@@ -20,9 +20,7 @@ export const fetchProductsFailure = (error) => ({
 });
 
 export function fetchProducts() {
-  console.log('inside');
   return (dispatch) => {
-    console.log(dispatch);
     dispatch(fetchProductsBegin());
     return fetch('https://makeup-api.herokuapp.com/api/v1/products.json')
       .then(console.log('api running'))
